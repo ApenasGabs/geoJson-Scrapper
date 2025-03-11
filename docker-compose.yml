@@ -1,0 +1,13 @@
+
+version: 3
+services:
+  puppeteer-opencv:
+    build: .
+    container_name: puppeteer-opencv
+    environment:
+      - OPENCV4NODEJS_DISABLE_AUTOBUILD=1
+    volumes:
+      - .:/app
+    working_dir: /app
+    network_mode: host  
+
